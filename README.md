@@ -18,3 +18,4 @@ Costumize manifest.json
 Create Launchpad
 Deploy to cloud launchpad
 Configure the launchpad destination
+
