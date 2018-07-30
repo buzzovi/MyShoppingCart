@@ -2,7 +2,7 @@
 SAP Cloud MyShoppingCart with OData v2
 ![alt text](https://github.com/buzzovi/MyShoppingCart/blob/master/ShoppingCartK%C3%A9p.PNG)
 
-Content: 
+Content of the tutorial: 
 - Introduction
 - Init Cloud Git repository
 - Import ShoppingCart to WebIDE
