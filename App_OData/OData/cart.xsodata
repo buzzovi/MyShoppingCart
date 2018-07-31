@@ -1,0 +1,27 @@
+service{
+
+   "ODATA_V4"."PRODUCT" as  "Products";
+   "ODATA_V4"."PRODUCT" as  "Product"
+   navigates ("CATEGORY__PRODUCT" as "ProductCategory");
+   
+   association "CATEGORY__PRODUCT" principal "ProductCategory"("CATEGORY")
+   multiplicity "1" dependent "Product"("CATEGORY")  multiplicity "*";
+   
+   "ODATA_V4"."FEATUREDPRODUCTS" as  "FeaturedProducts"
+   with("PRODUCTID","TYPE")
+   navigates("FEATURED__PRODUCTS" as "Product");
+   
+   association "FEATURED__PRODUCTS" principal "Product"("PRODUCTID")
+   multiplicity "1" dependent "FeaturedProducts"("PRODUCTID") multiplicity "1";
+      
+   "ODATA_V4"."PRODUCTCATEGORY" as  "ProductCategories"
+   navigates("PRODUCT__CATEGORIES" as "Products");
+   association "PRODUCT__CATEGORIES" principal "Product"("CATEGORY")
+   multiplicity "*" dependent "ProductCategories"("CATEGORY") multiplicity "1";
+   
+   "ODATA_V4"."PRODUCTCATEGORY" as  "ProductCategory"
+   navigates("PRODUCT__CATEGORY" as "Products");
+   association "PRODUCT__CATEGORY" principal "Product"("CATEGORY")
+   multiplicity "*" dependent "ProductCategory"("CATEGORY") multiplicity "1";
+    
+} 

@@ -1,0 +1,15 @@
+service{
+
+   "ODATA_V4"."POSTS" as  "Posts"
+   navigates("PostToComment" as "Comments");
+   
+   association "PostToComment" principal "Posts"("PostID")
+   multiplicity "1" dependent "Comment"("ParentID")  multiplicity "*";
+   
+   "ODATA_V4"."COMMENTS" as  "Comment";
+   
+   "ODATA_V4"."CATEGORIES" as  "Categories";
+
+   
+    
+} 
