@@ -1,27 +1,27 @@
 service{
 
-   "ODATA_V4"."PRODUCT" as  "Products";
-   "ODATA_V4"."PRODUCT" as  "Product"
+   "MYODATA"."PRODUCT" as  "Products";
+   "MYODATA"."PRODUCT" as  "Product"
    navigates ("CATEGORY__PRODUCT" as "ProductCategory");
    
-   association "CATEGORY__PRODUCT" principal "ProductCategory"("CATEGORY")
-   multiplicity "1" dependent "Product"("CATEGORY")  multiplicity "*";
+   association "CATEGORY__PRODUCT" principal "ProductCategory"("Category")
+   multiplicity "1" dependent "Product"("Category")  multiplicity "*";
    
-   "ODATA_V4"."FEATUREDPRODUCTS" as  "FeaturedProducts"
-   with("PRODUCTID","TYPE")
+   "MYODATA"."FEATUREDPRODUCTS" as  "FeaturedProducts"
+   with("ProductId","Type")
    navigates("FEATURED__PRODUCTS" as "Product");
    
-   association "FEATURED__PRODUCTS" principal "Product"("PRODUCTID")
-   multiplicity "1" dependent "FeaturedProducts"("PRODUCTID") multiplicity "1";
+   association "FEATURED__PRODUCTS" principal "Product"("ProductId")
+   multiplicity "1" dependent "FeaturedProducts"("ProductId") multiplicity "1";
       
-   "ODATA_V4"."PRODUCTCATEGORY" as  "ProductCategories"
+   "MYODATA"."PRODUCTCATEGORY" as  "ProductCategories"
    navigates("PRODUCT__CATEGORIES" as "Products");
-   association "PRODUCT__CATEGORIES" principal "Product"("CATEGORY")
-   multiplicity "*" dependent "ProductCategories"("CATEGORY") multiplicity "1";
+   association "PRODUCT__CATEGORIES" principal "Product"("Category")
+   multiplicity "*" dependent "ProductCategories"("Category") multiplicity "1";
    
-   "ODATA_V4"."PRODUCTCATEGORY" as  "ProductCategory"
+   "MYODATA"."PRODUCTCATEGORY" as  "ProductCategory"
    navigates("PRODUCT__CATEGORY" as "Products");
-   association "PRODUCT__CATEGORY" principal "Product"("CATEGORY")
-   multiplicity "*" dependent "ProductCategory"("CATEGORY") multiplicity "1";
+   association "PRODUCT__CATEGORY" principal "Product"("Category")
+   multiplicity "*" dependent "ProductCategory"("Category") multiplicity "1";
     
-} 
+}
