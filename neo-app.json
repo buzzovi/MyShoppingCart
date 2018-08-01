@@ -1,0 +1,48 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/odata",
+      "target": {
+        "type": "destination",
+        "name": "odata"
+      },
+      "description": "odata"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/img",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources/sap/m/demokit/cart/webapp/img"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/ODATA",
+      "target": {
+        "type": "destination",
+        "name": "HCP_odatav4"
+      },
+      "description": "SAP Cloud App Odata v4"
+    }
+  ]
+}
