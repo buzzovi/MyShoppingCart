@@ -2,14 +2,6 @@
   "welcomeFile": "index.html",
   "routes": [
     {
-      "path": "/odata",
-      "target": {
-        "type": "destination",
-        "name": "odata"
-      },
-      "description": "odata"
-    },
-    {
       "path": "/resources",
       "target": {
         "type": "service",
@@ -40,9 +32,9 @@
       "path": "/ODATA",
       "target": {
         "type": "destination",
-        "name": "HCP_odatav4"
+        "name": "HCP_odatav2"
       },
-      "description": "SAP Cloud App Odata v4"
+      "description": "SAP Cloud App Odata"
     }
   ]
 }
