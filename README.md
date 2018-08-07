@@ -1,4 +1,4 @@
-# MyShoppingCart
+# MyShoppingCart app with live OData
 SAP Cloud MyShoppingCart with OData v2
 ![alt text](https://github.com/buzzovi/MyShoppingCart/blob/master/ShoppingCartK%C3%A9p.PNG)
 
